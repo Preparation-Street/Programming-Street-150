@@ -1,0 +1,540 @@
+1. **Determining Even/Odd Numbers**  
+   **Problem Description:** Write a program to check whether a number is even or odd.  
+   **Problem Example:** Check if the number 7 is even or odd.  
+   **Example Explanation:** 7 is not divisible by 2, so it is an odd number.  
+   def is_even_or_odd(number):
+       if number % 2 == 0:
+           return "Even"
+       else:
+           return "Odd"
+   print(is_even_or_odd(7))
+
+2. **Checking for Prime Numbers**  
+   **Problem Description:** Write a program to determine if a number is prime.  
+   **Problem Example:** Check if the number 29 is prime.  
+   **Example Explanation:** A prime number is a number greater than 1 that has no divisors other than 1 and itself.  
+   def is_prime(number):
+       if number <= 1:
+           return "Not Prime"
+       for i in range(2, number):
+           if number % i == 0:
+               return "Not Prime"
+       return "Prime"
+   print(is_prime(29))
+
+3. **Validating Leap Years**  
+   **Problem Description:** Write a program to check if a given year is a leap year.  
+   **Problem Example:** Check if the year 2024 is a leap year.  
+   **Example Explanation:** A year is a leap year if it is divisible by 4, but not divisible by 100, unless it is also divisible by 400.  
+   def is_leap_year(year):
+       if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+           return "Leap Year"
+       else:
+           return "Not Leap Year"
+   print(is_leap_year(2024))
+
+4. **Calculating Armstrong Numbers**  
+   **Problem Description:** Write a program to check if a number is an Armstrong number.  
+   **Problem Example:** Check if the number 153 is an Armstrong number.  
+   **Example Explanation:** An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits.  
+   def is_armstrong(number):
+       digits = [int(d) for d in str(number)]
+       power = len(digits)
+       if number == sum(d ** power for d in digits):
+           return "Armstrong Number"
+       else:
+           return "Not Armstrong Number"
+   print(is_armstrong(153))
+
+5. **Generating the Fibonacci Series**  
+   **Problem Description:** Write a program to generate the Fibonacci series up to a given number.  
+   **Problem Example:** Generate the Fibonacci series up to 21.  
+   **Example Explanation:** The Fibonacci series is a sequence where each number is the sum of the two preceding ones, starting from 0 and 1.  
+   def fibonacci_series(limit):
+       a, b = 0, 1
+       while a <= limit:
+           print(a, end=" ")
+           a, b = b, a + b
+   fibonacci_series(21)
+
+6. **Identifying Palindromes**  
+   **Problem Description:** Write a program to check if a string or number is a palindrome.  
+   **Problem Example:** Check if the string "radar" is a palindrome.  
+   **Example Explanation:** A palindrome is a string that reads the same forward and backward.  
+   def is_palindrome(s):
+       return s == s[::-1]
+   print(is_palindrome("radar"))
+
+7. **Crafting Star Patterns**  
+   **Problem Description:** Write a program to create different star patterns (e.g., pyramid, diamond).  
+   **Problem Example:** Create a pyramid pattern of stars.  
+   **Example Explanation:** A pyramid pattern consists of rows of stars, with each row having more stars than the previous one.  
+   def print_pyramid(rows):
+       for i in range(rows):
+           print(' ' * (rows - i - 1) + '*' * (2 * i + 1))
+   print_pyramid(5)
+
+8. **Finding the Factorial of a Number**  
+   **Problem Description:** Write a program to compute the factorial of a given number.  
+   **Problem Example:** Compute the factorial of 5.  
+   **Example Explanation:** The factorial of a number n is the product of all positive integers less than or equal to n.  
+   def factorial(n):
+       if n == 0:
+           return 1
+       else:
+           return n * factorial(n - 1)
+   print(factorial(5))
+
+9. **Summing Digits of a Number**  
+   **Problem Description:** Write a program to calculate the sum of digits of a number.  
+   **Problem Example:** Calculate the sum of the digits of 1234.  
+   **Example Explanation:** The sum of the digits is obtained by adding each digit of the number.  
+   def sum_of_digits(number):
+       return sum(int(digit) for digit in str(number))
+   print(sum_of_digits(1234))
+
+10. **Finding the Greatest Common Divisor (GCD)**  
+    **Problem Description:** Write a program to find the GCD of two numbers.  
+    **Problem Example:** Find the GCD of 48 and 18.  
+    **Example Explanation:** The GCD of two numbers is the largest number that divides both of them without leaving a remainder.  
+    import math
+    def gcd(a, b):
+        return math.gcd(a, b)
+    print(gcd(48, 18))
+
+11. **Finding the Least Common Multiple (LCM)**  
+    **Problem Description:** Write a program to find the LCM of two numbers.  
+    **Problem Example:** Find the LCM of 4 and 5.  
+    **Example Explanation:** The LCM of two numbers is the smallest positive number that is divisible by both of them.  
+    import math
+    def lcm(a, b):
+        return abs(a * b) // math.gcd(a, b)
+    print(lcm(4, 5))
+
+12. **Counting Vowels and Consonants in a String**  
+    **Problem Description:** Write a program to count vowels and consonants in a given string.  
+    **Problem Example:** Count the vowels and consonants in the string "hello".  
+    **Example Explanation:** Vowels are 'a', 'e', 'i', 'o', 'u'. Consonants are all other alphabetic characters.  
+    def count_vowels_and_consonants(s):
+        vowels = "aeiou"
+        vowel_count = sum(1 for char in s if char in vowels)
+        consonant_count = sum(1 for char in s if char.isalpha() and char not in vowels)
+        return vowel_count, consonant_count
+    print(count_vowels_and_consonants("hello"))
+
+13. **Reversing a String**  
+    **Problem Description:** Write a program to reverse a given string.  
+    **Problem Example:** Reverse the string "world".  
+    **Example Explanation:** Reversing a string means producing a new string that is the original string read backward.  
+    def reverse_string(s):
+        return s[::-1]
+    print(reverse_string("world"))
+
+14. **Finding the Largest and Smallest Numbers in an Array**  
+    **Problem Description:** Write a program to find the largest and smallest numbers in an array.  
+    **Problem Example:** Find the largest and smallest numbers in the array [3, 1, 4, 1, 5, 9].  
+    **Example Explanation:** The largest number is the highest value, and the smallest number is the lowest value in the array.  
+    def find_largest_and_smallest(arr):
+        return max(arr), min(arr)
+    print(find_largest_and_smallest([3, 1, 4, 1, 5, 9]))
+
+15. **Sorting an Array**  
+    **Problem Description:** Write a program to sort an array of numbers in ascending order.  
+    **Problem Example:** Sort the array [3, 1, 4, 1, 5, 9].  
+    **Example Explanation:** Sorting arranges the elements of the array in increasing order.  
+    def sort_array(arr):
+        return sorted(arr)
+    print(sort_array([3, 1, 4, 1, 5, 9]))
+
+16. **Finding the Sum of Elements in an Array**  
+    **Problem Description:** Write a program to find the sum of elements in an array.  
+    **Problem Example:** Find the sum of the array [3, 1, 4, 1, 5, 9].  
+    **Example Explanation:** The sum is
+
+ the total of all the elements in the array.  
+    def sum_of_elements(arr):
+        return sum(arr)
+    print(sum_of_elements([3, 1, 4, 1, 5, 9]))
+
+17. **Checking for Armstrong Numbers in a Range**  
+    **Problem Description:** Write a program to find all Armstrong numbers within a given range.  
+    **Problem Example:** Find all Armstrong numbers between 1 and 500.  
+    **Example Explanation:** An Armstrong number is one that is equal to the sum of its own digits each raised to the power of the number of digits.  
+    def armstrong_numbers_in_range(start, end):
+        armstrong_numbers = []
+        for number in range(start, end + 1):
+            digits = [int(d) for d in str(number)]
+            power = len(digits)
+            if number == sum(d ** power for d in digits):
+                armstrong_numbers.append(number)
+        return armstrong_numbers
+    print(armstrong_numbers_in_range(1, 500))
+
+18. **Generating Multiplication Tables**  
+    **Problem Description:** Write a program to generate multiplication tables for a given number.  
+    **Problem Example:** Generate the multiplication table for the number 5.  
+    **Example Explanation:** Multiplication tables show the result of multiplying the number by integers from 1 to 10.  
+    def multiplication_table(number):
+        for i in range(1, 11):
+            print(f"{number} x {i} = {number * i}")
+    multiplication_table(5)
+
+19. **Finding Prime Numbers in a Range**  
+    **Problem Description:** Write a program to find all prime numbers within a given range.  
+    **Problem Example:** Find all prime numbers between 10 and 50.  
+    **Example Explanation:** Prime numbers are numbers greater than 1 that have no divisors other than 1 and themselves.  
+    def prime_numbers_in_range(start, end):
+        primes = []
+        for number in range(start, end + 1):
+            if number > 1:
+                for i in range(2, number):
+                    if number % i == 0:
+                        break
+                else:
+                    primes.append(number)
+        return primes
+    print(prime_numbers_in_range(10, 50))
+
+20. **Checking for Perfect Numbers**  
+    **Problem Description:** Write a program to determine if a number is a perfect number.  
+    **Problem Example:** Check if the number 28 is a perfect number.  
+    **Example Explanation:** A perfect number is a positive integer that is equal to the sum of its proper divisors.  
+    def is_perfect_number(number):
+        divisors_sum = sum(i for i in range(1, number) if number % i == 0)
+        return "Perfect Number" if divisors_sum == number else "Not Perfect Number"
+    print(is_perfect_number(28))
+
+21. **Calculating the Sum of Even Numbers in a Range**  
+    **Problem Description:** Write a program to find the sum of all even numbers within a given range.  
+    **Problem Example:** Find the sum of all even numbers between 1 and 20.  
+    **Example Explanation:** The sum is calculated by adding all even numbers within the range.  
+    def sum_of_even_numbers(start, end):
+        return sum(number for number in range(start, end + 1) if number % 2 == 0)
+    print(sum_of_even_numbers(1, 20))
+
+22. **Calculating the Sum of Odd Numbers in a Range**  
+    **Problem Description:** Write a program to find the sum of all odd numbers within a given range.  
+    **Problem Example:** Find the sum of all odd numbers between 1 and 20.  
+    **Example Explanation:** The sum is calculated by adding all odd numbers within the range.  
+    def sum_of_odd_numbers(start, end):
+        return sum(number for number in range(start, end + 1) if number % 2 != 0)
+    print(sum_of_odd_numbers(1, 20))
+
+23. **Finding the Fibonacci Number at a Specific Position**  
+    **Problem Description:** Write a program to find the Fibonacci number at a specific position.  
+    **Problem Example:** Find the 10th Fibonacci number.  
+    **Example Explanation:** The position starts from 1, where the first Fibonacci number is 0, the second is 1, and so on.  
+    def fibonacci_at_position(position):
+        a, b = 0, 1
+        for _ in range(position - 1):
+            a, b = b, a + b
+        return a
+    print(fibonacci_at_position(10))
+
+24. **Printing Prime Numbers Less Than a Given Number**  
+    **Problem Description:** Write a program to print all prime numbers less than a given number.  
+    **Problem Example:** Print all prime numbers less than 30.  
+    **Example Explanation:** Prime numbers less than a given number are all numbers greater than 1 that have no divisors other than 1 and themselves.  
+    def primes_less_than(number):
+        primes = []
+        for num in range(2, number):
+            if all(num % i != 0 for i in range(2, int(num ** 0.5) + 1)):
+                primes.append(num)
+        return primes
+    print(primes_less_than(30))
+
+25. **Finding the Number of Digits in a Number**  
+    **Problem Description:** Write a program to count the number of digits in a given number.  
+    **Problem Example:** Find the number of digits in 12345.  
+    **Example Explanation:** The number of digits is simply the length of the number when converted to a string.  
+    def count_digits(number):
+        return len(str(number))
+    print(count_digits(12345))
+
+26. **Checking if a Number is a Narcissistic Number**  
+    **Problem Description:** Write a program to check if a number is a narcissistic number (where the sum of its digits raised to the power of the number of digits equals the number itself).  
+    **Problem Example:** Check if the number 153 is a narcissistic number.  
+    **Example Explanation:** A narcissistic number is equal to the sum of its own digits each raised to the power of the number of digits.  
+    def is_narcissistic(number):
+        digits = [int(d) for d in str(number)]
+        power = len(digits)
+        return number == sum(d ** power for d in digits)
+    print(is_narcissistic(153))
+
+27. **Generating a Pattern of Numbers**  
+    **Problem Description:** Write a program to generate number patterns (e.g., sequential numbers in a matrix).  
+    **Problem Example:** Generate a pattern of sequential numbers up to 9.  
+    **Example Explanation:** The pattern consists of numbers arranged in a specific sequence or format.  
+    def generate_number_pattern(size):
+        number = 1
+        for i in range(size):
+            for j in range(size):
+                print(number, end=" ")
+                number += 1
+            print()
+    generate_number_pattern(3)
+
+28. **Finding the Sum of the Digits of the Factorial of a Number**  
+    **Problem Description:** Write a program to find the sum of the digits of the factorial of a given number.  
+    **Problem Example:** Find the sum of the digits of the factorial of 5.  
+    **Example Explanation:** Calculate the factorial of the number and then find the sum of the digits of the result.  
+    def factorial_digits_sum(n):
+        from math import factorial
+        return sum(int(digit) for digit in str(factorial(n)))
+    print(factorial_digits_sum(5))
+
+29. **Finding the Largest Palindrome in a String**  
+    **Problem Description:** Write a program to find the largest palindrome in a given string.  
+    **Problem Example:** Find the largest palindrome in the string "babad".  
+    **Example Explanation:** A palindrome is a substring that reads the same backward as forward.  
+    def largest_palindrome(s):
+        def is_palindrome(sub):
+            return sub == sub[::-1]
+
+        max_palindrome = ""
+        for i in range(len(s)):
+            for j in range(i + 1, len(s) + 1):
+                substring = s[i:j]
+                if is_palindrome(substring) and len(substring) > len(max_palindrome):
+                    max_palindrome = substring
+        return max_palindrome
+    print(largest_palindrome("babad"))
+
+30. **Finding Missing Numbers in a Sequence**  
+    **Problem Description:** Write a program to find missing numbers in a sequence from 1 to n.  
+    **Problem Example:** Find missing numbers in the sequence [1, 2, 4, 6, 3].  
+    **Example Explanation:** Identify which numbers are missing from the complete sequence from 1
+
+ to n.  
+    def find_missing_numbers(sequence, n):
+        full_set = set(range(1, n + 1))
+        sequence_set = set(sequence)
+        return list(full_set - sequence_set)
+    print(find_missing_numbers([1, 2, 4, 6, 3], 6))
+
+31. **Generating a Pascal’s Triangle**  
+    **Problem Description:** Write a program to generate Pascal's Triangle up to a given number of rows.  
+    **Problem Example:** Generate Pascal's Triangle up to 4 rows.  
+    **Example Explanation:** Pascal's Triangle is a triangular array of binomial coefficients.  
+    def generate_pascals_triangle(rows):
+        triangle = []
+        for i in range(rows):
+            row = [1] * (i + 1)
+            for j in range(1, len(row) - 1):
+                row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+            triangle.append(row)
+        return triangle
+    print(generate_pascals_triangle(4))
+
+32. **Finding the Median of an Array**  
+    **Problem Description:** Write a program to find the median of an array of numbers.  
+    **Problem Example:** Find the median of the array [3, 1, 4, 1, 5].  
+    **Example Explanation:** The median is the middle value in an ordered array.  
+    def find_median(arr):
+        arr.sort()
+        length = len(arr)
+        mid = length // 2
+        if length % 2 == 0:
+            return (arr[mid - 1] + arr[mid]) / 2
+        else:
+            return arr[mid]
+    print(find_median([3, 1, 4, 1, 5]))
+
+33. **Calculating the Power of a Number**  
+    **Problem Description:** Write a program to calculate the power of a number.  
+    **Problem Example:** Calculate 2 raised to the power of 3.  
+    **Example Explanation:** The power is calculated as base raised to the exponent.  
+    def power(base, exponent):
+        return base ** exponent
+    print(power(2, 3))
+
+34. **Checking for an Anagram**  
+    **Problem Description:** Write a program to check if two strings are anagrams.  
+    **Problem Example:** Check if "listen" and "silent" are anagrams.  
+    **Example Explanation:** An anagram is a word or phrase formed by rearranging the letters of a different word or phrase.  
+    def are_anagrams(str1, str2):
+        return sorted(str1) == sorted(str2)
+    print(are_anagrams("listen", "silent"))
+
+35. **Finding the Sum of Prime Numbers in a Range**  
+    **Problem Description:** Write a program to calculate the sum of all prime numbers within a given range.  
+    **Problem Example:** Find the sum of all prime numbers between 10 and 20.  
+    **Example Explanation:** Calculate the sum of all prime numbers within the specified range.  
+    def sum_of_primes_in_range(start, end):
+        def is_prime(number):
+            if number < 2:
+                return False
+            for i in range(2, int(number ** 0.5) + 1):
+                if number % i == 0:
+                    return False
+            return True
+        
+        return sum(number for number in range(start, end + 1) if is_prime(number))
+    print(sum_of_primes_in_range(10, 20))
+
+36. **Finding the N-th Triangular Number**  
+    **Problem Description:** Write a program to find the N-th triangular number.  
+    **Problem Example:** Find the 5th triangular number.  
+    **Example Explanation:** A triangular number is the sum of the first N natural numbers.  
+    def nth_triangular_number(n):
+        return n * (n + 1) // 2
+    print(nth_triangular_number(5))
+
+37. **Checking for Perfect Squares**  
+    **Problem Description:** Write a program to determine if a number is a perfect square.  
+    **Problem Example:** Check if 25 is a perfect square.  
+    **Example Explanation:** A perfect square is a number that is the square of an integer.  
+    def is_perfect_square(number):
+        return int(number ** 0.5) ** 2 == number
+    print(is_perfect_square(25))
+
+38. **Finding the Sum of Squares of Digits**  
+    **Problem Description:** Write a program to find the sum of the squares of the digits of a number.  
+    **Problem Example:** Find the sum of the squares of the digits of 123.  
+    **Example Explanation:** The sum is calculated by squaring each digit and adding the results.  
+    def sum_of_squares_of_digits(number):
+        return sum(int(digit) ** 2 for digit in str(number))
+    print(sum_of_squares_of_digits(123))
+
+39. **Generating a Square Matrix of a Given Size**  
+    **Problem Description:** Write a program to generate a square matrix of a given size and fill it with sequential numbers.  
+    **Problem Example:** Generate a 3x3 matrix.  
+    **Example Explanation:** The matrix is filled with sequential numbers starting from 1.  
+    def generate_square_matrix(size):
+        matrix = [[0] * size for _ in range(size)]
+        number = 1
+        for i in range(size):
+            for j in range(size):
+                matrix[i][j] = number
+                number += 1
+        return matrix
+    for row in generate_square_matrix(3):
+        print(row)
+
+40. **Calculating the Sum of Digits of a Number Until Single Digit**  
+    **Problem Description:** Write a program to keep summing the digits of a number until a single digit is obtained.  
+    **Problem Example:** Find the single digit obtained by repeatedly summing the digits of 1234.  
+    **Example Explanation:** Continue summing the digits of the number until a single digit is obtained.  
+    def sum_digits_until_single_digit(number):
+        while number >= 10:
+            number = sum(int(digit) for digit in str(number))
+        return number
+    print(sum_digits_until_single_digit(1234))
+
+41. **Finding the Count of Specific Digits in a Number**  
+    **Problem Description:** Write a program to count the occurrences of a specific digit in a number.  
+    **Problem Example:** Count the occurrences of the digit 3 in the number 123433.  
+    **Example Explanation:** Count how many times a particular digit appears in the number.  
+    def count_specific_digit(number, digit):
+        return str(number).count(str(digit))
+    print(count_specific_digit(123433, 3))
+
+42. **Generating a Fibonacci Sequence Using Recursion**  
+    **Problem Description:** Write a recursive program to generate the Fibonacci sequence up to a given number.  
+    **Problem Example:** Generate the Fibonacci sequence up to 21.  
+    **Example Explanation:** Use recursion to compute the Fibonacci sequence.  
+    def fibonacci_recursive(n):
+        if n <= 0:
+            return []
+        elif n == 1:
+            return [0]
+        elif n == 2:
+            return [0, 1]
+        else:
+            sequence = fibonacci_recursive(n - 1)
+            sequence.append(sequence[-1] + sequence[-2])
+            return sequence
+    print(fibonacci_recursive(8))
+
+43. **Finding All Divisors of a Number**  
+    **Problem Description:** Write a program to find all divisors of a given number.  
+    **Problem Example:** Find all divisors of 28.  
+    **Example Explanation:** Divisors are numbers that divide the given number without leaving a remainder.  
+    def find_divisors(number):
+        divisors = []
+        for i in range(1, number + 1):
+            if number % i == 0:
+                divisors.append(i)
+        return divisors
+    print(find_divisors(28))
+
+44. **Finding the Average of Numbers in an Array**  
+    **Problem Description:** Write a program to calculate the average of numbers in an array.  
+    **Problem Example:** Find the average of the array [4, 8, 15, 16, 23, 42].  
+    **Example Explanation:** The average is calculated as the sum of the numbers divided by the number of elements.  
+    def average_of_array(arr):
+        return sum(arr) / len(arr)
+    print(average_of_array([4, 8, 15, 16, 23, 42]))
+
+45. **Finding the Mode of Numbers in an Array**  
+    **Problem Description:** Write a program to find the mode (most frequent number) in an array.  
+   
+
+ **Problem Example:** Find the mode of the array [1, 2, 3, 4, 4, 4, 5, 6].  
+    **Example Explanation:** The mode is the number that appears most frequently.  
+    from collections import Counter
+
+    def find_mode(arr):
+        count = Counter(arr)
+        max_count = max(count.values())
+        return [num for num, freq in count.items() if freq == max_count]
+
+    print(find_mode([1, 2, 3, 4, 4, 4, 5, 6]))
+
+46. **Generating a Multiplication Table**  
+    **Problem Description:** Write a program to generate a multiplication table for a given number.  
+    **Problem Example:** Generate a multiplication table for the number 5 up to 10.  
+    **Example Explanation:** Create a table where each entry is the product of the given number and an integer.  
+    def multiplication_table(number, up_to):
+        return [number * i for i in range(1, up_to + 1)]
+    print(multiplication_table(5, 10))
+
+47. **Finding the Greatest Common Divisor (GCD) Using Euclid's Algorithm**  
+    **Problem Description:** Write a program to find the GCD of two numbers using Euclid's algorithm.  
+    **Problem Example:** Find the GCD of 48 and 18.  
+    **Example Explanation:** The GCD is the largest number that divides both given numbers without leaving a remainder.  
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+    print(gcd(48, 18))
+
+48. **Finding the Least Common Multiple (LCM)**  
+    **Problem Description:** Write a program to find the LCM of two numbers.  
+    **Problem Example:** Find the LCM of 4 and 5.  
+    **Example Explanation:** The LCM is the smallest number that is a multiple of both given numbers.  
+    def lcm(a, b):
+        return abs(a * b) // gcd(a, b)
+    print(lcm(4, 5))
+
+49. **Finding All Possible Substrings of a String**  
+    **Problem Description:** Write a program to find all possible substrings of a given string.  
+    **Problem Example:** Find all substrings of the string "abc".  
+    **Example Explanation:** Substrings are continuous sequences of characters within the string.  
+    def all_substrings(s):
+        substrings = []
+        for i in range(len(s)):
+            for j in range(i + 1, len(s) + 1):
+                substrings.append(s[i:j])
+        return substrings
+    print(all_substrings("abc"))
+
+50. **Finding the Longest Palindrome Substring**  
+    **Problem Description:** Write a program to find the longest palindromic substring in a given string.  
+    **Problem Example:** Find the longest palindromic substring in "babad".  
+    **Example Explanation:** A palindrome is a string that reads the same forward and backward.  
+    def longest_palindromic_substring(s):
+        def expand_from_center(left, right):
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                left -= 1
+                right += 1
+            return s[left + 1:right]
+        
+        longest = ""
+        for i in range(len(s)):
+            odd_palindrome = expand_from_center(i, i)
+            even_palindrome = expand_from_center(i, i + 1)
+            longest = max(longest, odd_palindrome, even_palindrome, key=len)
+        
+        return longest
+    print(longest_palindromic_substring("babad"))
