@@ -5,6 +5,14 @@ For those coming from a non-technical background, the world of coding can seem d
 
 While DSA is a critical Problem-Solving Skill, it's important to build a strong foundation before diving into it.
 
+**Programming Street - 150** is a collection of 150 curated problems focusing on building foundational programming skills. This collection is divided into three different sprints:
+
+1. **PS-Sprint-1**: This sprint covers fundamental problems to help you build your basic programming skills.
+
+2. **PS-Sprint-2**: This sprint focuses on intermediate-level problems, further strengthening your foundational skills and introducing more complex concepts.
+
+3. **PS-Sprint-3**: This sprint includes advanced problems designed to solidify your understanding and prepare you for more challenging programming tasks.
+
 ## The Right Starting Point
 
 1. Select a Programming Language: Begin with a language that suits your interests or industry needs Python, Java, or C++. Focus on mastering the fundamentals: syntax, control structures (loops, conditionals), variables, data types, and other core concepts. 
