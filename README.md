@@ -1,6 +1,9 @@
 # Programming Street - 150
 Starting from Zero in Coding - DSA is a critical Problem-Solving Skill, it's important to build a strong foundation before diving into it.
 
+#### Video 🎥 - Click on the Img 👇
+[![Watch the video](https://github.com/user-attachments/assets/77812dca-b9ac-4598-8831-c253789e5781)](https://www.youtube.com/watch?v=f-CTHI3xl74)
+
 For those coming from a non-technical background, the world of coding can seem daunting, especially when faced with advanced concepts like Data Structures and Algorithms (DSA). 
 
 While DSA is a critical Problem-Solving Skill, it's important to build a strong foundation before diving into it.
