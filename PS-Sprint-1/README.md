@@ -475,9 +475,7 @@
     Output: `45`  
     Explanation: The second largest number in the array is 45.  
 
-50. **
-
-Finding the Longest Substring Without Repeating Characters**  
+50. **Finding the Longest Substring Without Repeating Characters**  
     **Difficulty**: Medium  
     **Topics**: String Manipulation, Sliding Window  
     **Description**: Write a program to find the longest substring without repeating characters in a given string.  
