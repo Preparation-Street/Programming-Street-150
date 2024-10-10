@@ -147,7 +147,7 @@
     **Example**:  
     Input: `array = [1, 2, 3, 4, 5]`  
     Output: `15`  
-    Explanation: The sum of the elements in the array is 15.  
+    Explanation: The sum of the elements in the array is 15.  done 
 
 17. **Checking for Armstrong Numbers in a Range**  
     **Difficulty**: Easy  

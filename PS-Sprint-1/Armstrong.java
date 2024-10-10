@@ -4,6 +4,7 @@ class Armstrong{
     public static void checkArmstrong(int n){
         int temp = n ;
         int sum  = 0;
+        
         while(n>0){
             int digit = n % 10;
             n = n / 10;

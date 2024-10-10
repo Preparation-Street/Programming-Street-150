@@ -1,6 +1,10 @@
 import java.util.Scanner;
+class least_common_multiple {
+    int lcm(int a, int b){
+        int gcd = gcd(a, b);
+        return Math.abs(a*b)/gcd;
+    }
 
-class greatest_common_divisor {
     int gcd(int a, int b){
         if(b == 0){
             return a;
@@ -8,23 +12,20 @@ class greatest_common_divisor {
 
         while(b!=0){
             int temp = b;
-            b = a %b;
+            b = a%b;
             a = temp;
         }
-
         return a;
     }
 
     public static void main(String[] args) {
-
-        greatest_common_divisor g = new greatest_common_divisor();  
+        least_common_multiple lcm = new least_common_multiple();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the first number: ");
         int a = sc.nextInt();
         System.out.println("Enter the second number: ");
         int b = sc.nextInt();
-        System.out.println("Greatest Common Divisor of " + a + " and " + b + " is " + g.gcd(a, b));
+        System.out.println("Least Common Multiple of " + a + " and " + b + " is " + lcm.lcm(a, b));
         sc.close();
-        
     }
 }
