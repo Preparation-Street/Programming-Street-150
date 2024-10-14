@@ -1,6 +1,9 @@
 # Programming Street - 150
 Starting from Zero in Coding - DSA is a critical Problem-Solving Skill, it's important to build a strong foundation before diving into it.
 
+#### [Programming Street - 150 Feedback Form](https://forms.gle/aHqtQLzw7C7tscgXA)
+#### [All Important Links](https://linktr.ee/linkszone)
+
 #### Video 🎥 - Click on the Img 👇
 [![Watch the video](https://github.com/user-attachments/assets/77812dca-b9ac-4598-8831-c253789e5781)](https://www.youtube.com/watch?v=f-CTHI3xl74)
 
